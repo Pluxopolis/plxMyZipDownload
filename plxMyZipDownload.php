@@ -41,8 +41,8 @@ class plxMyZipDownload extends plxPlugin {
 		$string = "
 		\$download = plxUtils::getValue(\$_GET['download']);
 		if(\$download!='') {
-			\$file = PLX_ROOT.\$this->aConf['images'].plxUtils::nullbyteRemove(\$_GET['download']);
-			if(@file_exists(\$file) AND preg_match('#^'.str_replace('\\\', '/', realpath(PLX_ROOT.\$this->aConf['images'])).'#', str_replace('\\\', '/', realpath(\$file)))) {
+			\$file = PLX_ROOT.\$this->aConf['medias'].plxUtils::nullbyteRemove(\$_GET['download']);
+			if(@file_exists(\$file) AND preg_match('#^'.str_replace('\\\', '/', realpath(PLX_ROOT.\$this->aConf['medias'])).'#', str_replace('\\\', '/', realpath(\$file)))) {
 				include(PLX_PLUGINS.'plxMyZipDownload/zipfile.inc.php');
 				\$zipfile = new zipfile();
 				\$handle = fopen(\$file, 'rb');
